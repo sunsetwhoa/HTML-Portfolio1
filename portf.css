@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+  font-family: Monospace, Ariel;
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 550px) {
+  p {
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow-x: hidden;
+  min-width: 300px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  height: 66px;
+  z-index: 1;
+  box-shadow: 0 1px 2px #2E2E3D;
+
+  background-color: #EAB006;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+ul {
+  width: 280px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  padding: 0 10px 0 0;
+}
+
+#navbar p {
+  height: 66px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar p:hover {
+  background-color: white;
+}
+
+#welcome-section {
+  height: 700px;
+  color: white;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: center;
+  //align-items: center;
+
+  background: linear-gradient(
+    45deg,
+    #0C191F,
+    black
+  );
+}
+
+#weltxt {
+  margin-top: 240px;
+  //height: 600px;
+  //background-color: red;
+  //width: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+#dute {
+  height: 318px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin: -20px 30px 0 0;
+}
+#pute {
+  width: 140px;
+}
+
+#projects {
+  padding: 60px 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  //background-color: #5C5F64;
+  background: linear-gradient(
+    180deg,
+    #5C5F64 40%,
+    #3C4A4F
+  );
+}
+#projects h2 {
+  //background-color: blue;
+  width: 404px;
+  padding-bottom: 40px;
+}
+#divjects {
+  //background-color: blue;
+  width: max(80vw, 970px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+figure {
+  box-shadow: 1px 1px 3px #4A4A4A;
+  transition: 0.2s;
+  
+}
+
+figure img {
+  filter: grayscale(1);
+  transition: 0.2s;
+  width: max(25vw, 404px);
+  aspect-ratio: 1.4;
+  object-fit: cover;
+}
+
+@media (max-width: 999px) {
+  #divjects {
+    width: max(50vw, 400px);
+  }
+
+  #projects {
+    padding: 30px 0 55px 0;
+  }
+  
+  figure img {
+  width: max(50vw, 300px);
+  }
+}
+
+figcaption {
+  margin-top: -4px;
+  background-color: #020205;
+  border-top: solid #00DA83 2px;
+  border-radius: 0 0 2px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: max(4vw, 70px);
+  transition: 0.4s;
+
+  font-size: 22;
+  color: #00DA83;
+}
+
+figure:hover img{
+  filter: grayscale(0);
+}
+figure:hover figcaption{
+  color: white;
+}
+figure:hover span{
+  color: #000B13;
+}
+
+span {
+  transition: 0.1s;
+}
+
+#contact {
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: black;
+  color: white;
+  /*background: repeating-linear-gradient(
+    180deg,
+    white,
+    grey
+  );*/
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: lighter;
+  //background-color: red;
+  //width: 400;
+}
+
+#welcome-section h2 {
+  margin-top: -10px;
+  //font-style: italic;
+}
+
+h3 {
+  font-weight: lighter;
+  font-style: italic;
+  margin-top: -15px;
+}
+
+#conword {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -60px;
+  
+}
+
+
+#tacts {
+  /*background-color: dimgrey;*/
+  width: 555px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+
+#tacts img {
+  width: 60px;
+  filter: invert(1);
+  padding-right: 12px;
+}
+
+
+.up {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+
+  transition: 0.1s;
+}
+
+.up:hover {
+  transform: translate(0, -4px);
+}
+
+@media (max-width: 999px) {
+  #tacts {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #tacts a {
+    padding: 25px;
+  }
+
+  .up {
+    font-size: 22px;
+  }
+
+  #tacts img {
+    width: 40px;
+  }
+}
+
+footer {
+  height: 111px;
+  padding-right: 2em;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  color: white;
+  border-top: solid 3px white;
+  background: linear-gradient(
+    360deg,
+    #0C191F,
+    black
+  );
+}
